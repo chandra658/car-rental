@@ -1,0 +1,483 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>King of Boys - Car Rental System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+            👑 KING OF BOYS 🚗
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#cars">Cars</a>
+            <a href="#booking">Booking</a>
+            <a href="#payment">Payment</a>
+            <a href="#admin">Admin</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>👑 KING OF BOYS</h1>
+
+            <h2>❤️ LOVE TO DRIVE 🚗</h2>
+
+            <p>
+                Rent your dream car easily, quickly and safely.
+            </p>
+
+            <a href="#cars" class="hero-btn">
+                Explore Cars
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SEARCH ================= -->
+
+    <section class="search-section">
+
+        <h2>🔍 Search Cars</h2>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search car name..."
+                onkeyup="searchCars()"
+            >
+
+            <select id="category" onchange="searchCars()">
+
+                <option value="all">
+                    All Cars
+                </option>
+
+                <option value="indian">
+                    Indian Cars
+                </option>
+
+                <option value="premium">
+                    Premium Cars
+                </option>
+
+            </select>
+
+            <button onclick="searchCars()">
+                Search
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CARS ================= -->
+
+    <section class="cars-section" id="cars">
+
+        <h2>🚗 Available Cars</h2>
+
+        <div class="car-container">
+
+
+            <!-- SWIFT -->
+
+            <div class="car-card" data-category="indian">
+
+                <div class="car-image">
+                    🚗
+                </div>
+
+                <div class="car-details">
+
+                    <h3>Maruti Suzuki Swift</h3>
+
+                    <p>🇮🇳 Indian Car</p>
+
+                    <p>⛽ Petrol</p>
+
+                    <p>👥 5 Seats</p>
+
+                    <h4>₹1,500 / Day</h4>
+
+                    <button
+                        class="rent-btn"
+                        onclick="selectCar('Maruti Suzuki Swift', 1500)"
+                    >
+                        Rent Now
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- DZIRE -->
+
+            <div class="car-card" data-category="indian">
+
+                <div class="car-image">
+                    🚘
+                </div>
+
+                <div class="car-details">
+
+                    <h3>Maruti Suzuki Dzire</h3>
+
+                    <p>🇮🇳 Indian Car</p>
+
+                    <p>⛽ Petrol</p>
+
+                    <p>👥 5 Seats</p>
+
+                    <h4>₹1,700 / Day</h4>
+
+                    <button
+                        class="rent-btn"
+                        onclick="selectCar('Maruti Suzuki Dzire', 1700)"
+                    >
+                        Rent Now
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- BALENO -->
+
+            <div class="car-card" data-category="indian">
+
+                <div class="car-image">
+                    🚗
+                </div>
+
+                <div class="car-details">
+
+                    <h3>Maruti Suzuki Baleno</h3>
+
+                    <p>🇮🇳 Indian Car</p>
+
+                    <p>⛽ Petrol</p>
+
+                    <p>👥 5 Seats</p>
+
+                    <h4>₹1,800 / Day</h4>
+
+                    <button
+                        class="rent-btn"
+                        onclick="selectCar('Maruti Suzuki Baleno', 1800)"
+                    >
+                        Rent Now
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- NEXON -->
+
+            <div class="car-card" data-category="indian">
+
+                <div class="car-image">
+                    🚙
+                </div>
+
+                <div class="car-details">
+
+                    <h3>Tata Nexon</h3>
+
+                    <p>🇮🇳 Indian Car</p>
+
+                    <p>⛽ Petrol / Diesel</p>
+
+                    <p>👥 5 Seats</p>
+
+                    <h4>₹2,200 / Day</h4>
+
+                    <button
+                        class="rent-btn"
+                        onclick="selectCar('Tata Nexon', 2200)"
+                    >
+                        Rent Now
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- CRETA -->
+
+            <div class="car-card" data-category="indian">
+
+                <div class="car-image">
+                    🚙
+                </div>
+
+                <div class="car-details">
+
+                    <h3>Hyundai Creta</h3>
+
+                    <p>🇮🇳 Indian Car</p>
+
+                    <p>⛽ Petrol / Diesel</p>
+
+                    <p>👥 5 Seats</p>
+
+                    <h4>₹2,500 / Day</h4>
+
+                    <button
+                        class="rent-btn"
+                        onclick="selectCar('Hyundai Creta', 2500)"
+                    >
+                        Rent Now
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- SELTOS -->
+
+            <div class="car-card" data-category="indian">
+
+                <div class="car-image">
+                    🚙
+                </div>
+
+                <div class="car-details">
+
+                    <h3>Kia Seltos</h3>
+
+                    <p>🇮🇳 Indian Car</p>
+
+                    <p>⛽ Petrol / Diesel</p>
+
+                    <p>👥 5 Seats</p>
+
+                    <h4>₹2,800 / Day</h4>
+
+                    <button
+                        class="rent-btn"
+                        onclick="selectCar('Kia Seltos', 2800)"
+                    >
+                        Rent Now
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- THAR -->
+
+            <div class="car-card" data-category="indian">
+
+                <div class="car-image">
+                    🚙
+                </div>
+
+                <div class="car-details">
+
+                    <h3>Mahindra Thar</h3>
+
+                    <p>🇮🇳 Indian Car</p>
+
+                    <p>⛽ Petrol / Diesel</p>
+
+                    <p>👥 4 Seats</p>
+
+                    <h4>₹3,500 / Day</h4>
+
+                    <button
+                        class="rent-btn"
+                        onclick="selectCar('Mahindra Thar', 3500)"
+                    >
+                        Rent Now
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- SCORPIO -->
+
+            <div class="car-card" data-category="indian">
+
+                <div class="car-image">
+                    🚙
+                </div>
+
+                <div class="car-details">
+
+                    <h3>Mahindra Scorpio-N</h3>
+
+                    <p>🇮🇳 Indian Car</p>
+
+                    <p>⛽ Diesel</p>
+
+                    <p>👥 7 Seats</p>
+
+                    <h4>₹3,200 / Day</h4>
+
+                    <button
+                        class="rent-btn"
+                        onclick="selectCar('Mahindra Scorpio-N', 3200)"
+                    >
+                        Rent Now
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- INNOVA -->
+
+            <div class="car-card" data-category="indian">
+
+                <div class="car-image">
+                    🚐
+                </div>
+
+                <div class="car-details">
+
+                    <h3>Toyota Innova Crysta</h3>
+
+                    <p>🇮🇳 Indian Car</p>
+
+                    <p>⛽ Diesel</p>
+
+                    <p>👥 7 Seats</p>
+
+                    <h4>₹3,800 / Day</h4>
+
+                    <button
+                        class="rent-btn"
+                        onclick="selectCar('Toyota Innova Crysta', 3800)"
+                    >
+                        Rent Now
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- FORTUNER -->
+
+            <div class="car-card" data-category="premium">
+
+                <div class="car-image">
+                    🚙
+                </div>
+
+                <div class="car-details">
+
+                    <h3>Toyota Fortuner</h3>
+
+                    <p>⭐ Premium Car</p>
+
+                    <p>⛽ Diesel</p>
+
+                    <p>👥 7 Seats</p>
+
+                    <h4>₹5,000 / Day</h4>
+
+                    <button
+                        class="rent-btn"
+                        onclick="selectCar('Toyota Fortuner', 5000)"
+                    >
+                        Rent Now
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- BMW -->
+
+            <div class="car-card" data-category="premium">
+
+                <div class="car-image">
+                    🚘
+                </div>
+
+                <div class="car-details">
+
+                    <h3>BMW 3 Series</h3>
+
+                    <p>⭐ Premium Car</p>
+
+                    <p>⛽ Petrol</p>
+
+                    <p>👥 5 Seats</p>
+
+                    <h4>₹7,000 / Day</h4>
+
+                    <button
+                        class="rent-btn"
+                        onclick="selectCar('BMW 3 Series', 7000)"
+                    >
+                        Rent Now
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- AUDI -->
+
+            <div class="car-card" data-category="premium">
+
+                <div class="car-image">
+                    🚘
+                </div>
+
+                <div class="car-details">
+
+                    <h3>Audi A4</h3>
+
+                    <p>⭐ Premium Car</p>
+
+                    <p>⛽ Petrol</p>
+
+                    <p>👥 5 Seats</p>
+
+                    <h4>₹7,500 / Day</h4>
+
+                    <button
+                        class="rent-btn"
+                        onclick="selectCar('Audi A4', 7500)"
+```
+
