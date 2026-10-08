@@ -1,5 +1,4 @@
 # car-rental
-# Smart Budget Planner
 
 A lightweight, zero-backend Single-Page Application (SPA) designed for personal financial management, expense categorization, and savings goal tracking with built-in role-based access control.
 
@@ -7,7 +6,7 @@ A lightweight, zero-backend Single-Page Application (SPA) designed for personal 
 
 ## Live Links & Resources
 
-* **Live Deployment (GitHub Pages)**:[https://github.com/chandra658/car-rental/new/main?readme=1]https://github.com/chandra658/car-rental/new/main?readme=1
+* **Live Deployment (GitHub Pages)**:https://github.com/chandra658/car-rental/new/main?readme=1
 
 ---
 
